@@ -7,8 +7,8 @@
 
 set -e
 
-DEVICE_COMMON=sm6250-common
-VENDOR=redmi
+DEVICE=excalibur
+VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2020
 
@@ -26,10 +26,10 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers "curtana excalibur joyeuse"
+write_headers "excalibur"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true

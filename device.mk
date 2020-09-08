@@ -15,7 +15,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/redmi/sm6250-common/sm6250-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/excalibur-vendor.mk)
+
+LOCAL_PATH := device/xiaomi/excalibur
 
 -include $(LOCAL_PATH)/product_prop.mk
 
@@ -82,7 +84,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.redmi_sm6250
+    android.hardware.light@2.0-service.excalibur
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -109,7 +111,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.redmi_sm6250
+    android.hardware.power@1.2-service.excalibur
     
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
